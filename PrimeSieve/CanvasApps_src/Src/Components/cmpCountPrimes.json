@@ -1,0 +1,54 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "cmpCountPrimes",
+    "TemplateGuid": "e2c4126e58b74f7b8de761007de620fe"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Primes Up To",
+      "Hidden": false,
+      "Name": "UpTo",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Number of primes up to this value",
+      "Type": "{\"Version\":\"1.314\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Num Primes",
+      "Hidden": true,
+      "Name": "NumPrimes",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "The number of primes found below SieveSize",
+      "Type": "{\"Version\":\"1.314\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Duration",
+      "Hidden": true,
+      "Name": "Duration",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Time in ms that it took to calculate number of primes",
+      "Type": "{\"Version\":\"1.314\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637628095376764158",
+  "Name": "e2c4126e58b74f7b8de761007de620fe",
+  "OverridableProperties": {},
+  "Version": "637628142655216751"
+}

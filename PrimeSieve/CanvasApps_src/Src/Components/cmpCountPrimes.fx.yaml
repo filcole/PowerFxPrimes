@@ -1,0 +1,79 @@
+cmpCountPrimes As CanvasComponent:
+    Duration: =varDuration
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    NumPrimes: =varNumPrimes
+    OnReset: |
+        =Set(varTimeStart, Now());
+        
+        // ** Generate the sieve
+        
+        // Determine the number of rows in the initial sieve
+        Set(varSieveSize, RoundDown((cmpCountPrimes.UpTo - 1) / 2, 0));
+        
+        // Clear the sieve from previous any previous runs
+        Clear(colSieve);
+        
+        // Determine number of whole iterations of 50,000 required
+        Set(varWholeIterations, RoundDown(varSieveSize / 50000, 0));
+        
+        // Generate prime candidates for whole iterations of 50,000, i.e. 1 .. 50,000, 50,001 .. 100,000
+        ForAll(
+            Sequence(varWholeIterations),
+            With(
+                { outer: Value - 1 },
+                ForAll(
+                    Sequence(50000),
+                    Collect(colSieve, 1 + (((50000 * outer) + Value) * 2));
+                )
+            )
+        );
+        
+        // Generate remaining prime candidates
+        ForAll(
+            Sequence(Mod(varSieveSize, 50000)),
+            Collect(colSieve, 1 + (((50000 * varWholeIterations) + Value) * 2));
+        );
+        
+        // ** Filter the sieve
+        
+        // Copy the sieve so that we can use it as the iterator.  We only need to copy up to the sqrt
+        Set(colSourceSieve, Filter(colSieve, Value <= Sqrt(cmpCountPrimes.UpTo)));
+        
+        // Remove elements from the sieve
+        ForAll(
+            colSourceSieve,
+            With(
+                { n: Value },
+                RemoveIf(
+                    colSieve, 
+                    ThisRecord.Value >= Power(n, 2),
+                    Mod(ThisRecord.Value, n) = 0
+                )
+            )
+        );
+        
+        // ** Prime numbers generated
+        
+        // Add 1 because 2 is a prime number
+        Set(varNumPrimes, 1 + Count(colSieve));
+        
+        // Report how long we took
+        Set(varTimeEnd, Now());
+        Set(varDuration, DateDiff(varTimeStart, varTimeEnd, Milliseconds));
+    UpTo: |
+        =
+        
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblDiagnostics As label:
+        Height: =211
+        Size: =18
+        Text: |
+            ="UpTo: " & cmpCountPrimes.UpTo & Char(13) & "varSieveSize: " & varSieveSize & Char(13) &  "NumPrimes:" & cmpCountPrimes.NumPrimes & Char(13) & "Start: " & Text(varTimeStart, DateTimeFormat.UTC) & Char(13) & "End: " & Text(varTimeEnd, DateTimeFormat.UTC) & Char(13) & "Duration: " & Text(varDuration) & "ms"
+        Width: =640
+        ZIndex: =1
+

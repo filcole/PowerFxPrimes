@@ -1,0 +1,92 @@
+{
+  "ComponentIndexes": {
+    "cmpCountPrimes": 1,
+    "myCmpCountPrimes": 1
+  },
+  "ControlUniqueIds": {
+    "App": 1,
+    "btnRun": 9,
+    "cmpCountPrimes": 3,
+    "galExpectedPrimes": 11,
+    "galleryTemplate2": 13,
+    "Label1": 18,
+    "Label1_1": 19,
+    "Label1_2": 20,
+    "lblDiagnostics": 4,
+    "lblOutput": 10,
+    "lblUpTo": 7,
+    "myCmpCountPrimes": 6,
+    "numPrimes": 15,
+    "Screen1": 5,
+    "Separator": 16,
+    "txtUpTo": 8,
+    "UpTo": 14
+  },
+  "FunctionParamsInvariantScripts": {},
+  "HeaderLastSavedDateTimeUTC": "07/25/2021 12:52:42",
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OldLogoFileName": "gkdxfesv.jpg",
+  "OrderComponentMetadata": {
+    "e2c4126e58b74f7b8de761007de620fe": 0
+  },
+  "OrderComponentTemplate": {
+    "e2c4126e58b74f7b8de761007de620fe": 0
+  },
+  "OrderDataSource": {
+    "colSieve": 1,
+    "CustomGallerySample": 0,
+    "primeCounts": 2
+  },
+  "OrderGroupControls": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 2,
+    "gallery": 3,
+    "label": 0,
+    "rectangle": 4,
+    "text": 1
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "btnRun": 2,
+    "cmpCountPrimes": 0,
+    "galExpectedPrimes": 8,
+    "galleryTemplate2": 9,
+    "Label1": 6,
+    "Label1_1": 7,
+    "Label1_2": 5,
+    "lblDiagnostics": 13,
+    "lblOutput": 3,
+    "lblUpTo": 0,
+    "myCmpCountPrimes": 4,
+    "numPrimes": 11,
+    "Screen1": 0,
+    "Separator": 12,
+    "txtUpTo": 1,
+    "UpTo": 10
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
+  "TemplateVersions": {
+    "e2c4126e58b74f7b8de761007de620fe": "637628143624585243"
+  },
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.20305290000000001,
+    "ControlCount": {
+      "button": 1,
+      "e2c4126e58b74f7b8de761007de620fe": 2,
+      "gallery": 1,
+      "galleryTemplate": 1,
+      "icon": 1,
+      "label": 7,
+      "rectangle": 1,
+      "screen": 1,
+      "text": 1
+    },
+    "DeserializationLoadTime": 1.1153561000000001,
+    "ErrorCount": 4
+  }
+}
